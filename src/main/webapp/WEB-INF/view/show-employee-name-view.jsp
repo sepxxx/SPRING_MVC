@@ -7,10 +7,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+    <h2>NICE TO MEET YOU</h2>
+    <br>
+    <br>
+<%--    ${param.employeeName}--%>
+${employeeNameAttribute} ${descriptionAttribute}
+</body>
 </html>
