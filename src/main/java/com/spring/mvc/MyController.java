@@ -1,8 +1,10 @@
 package com.spring.mvc;
 
 
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -21,7 +23,11 @@ public class MyController {
         return "ask-employee-details-view";}
 
     @RequestMapping("/showEmployeeDetails")
-    public String showEmployeeDetails(@ModelAttribute("employee") Employee emp) {
+    public String showEmployeeDetails(@Valid @ModelAttribute("employee") Employee emp, BindingResult bindingResult) {
+
+        if(bindingResult.hasErrors())
+            return "ask-employee-details-view";
+
         return "show-employee-details-view";
     }
 }

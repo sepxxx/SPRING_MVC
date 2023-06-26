@@ -1,3 +1,5 @@
+
+
 <%--
   Created by IntelliJ IDEA.
   User: jeraldin
@@ -6,6 +8,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Title</title>
@@ -15,12 +18,23 @@
     <h2>NICE TO MEET YOU</h2>
     <br>
     <br>
-    ${employee.name}
+    NAME: ${employee.name}
     <br>
     <br>
-    ${employee.surname}
+    SURNAME: ${employee.surname}
     <br>
     <br>
-    ${employee.salary}
+    SALARY: ${employee.salary}
+    <br><br>
+    DEPARTMENT: ${employee.department}
+    <br><br>
+    CAR BRAND: ${employee.carBrand}
+    <br><br>
+    LANGUAGES:
+    <ul>
+        <c:forEach var="lang" items="${employee.languages}">
+            <li>${lang}</li>
+        </c:forEach>
+    </ul>
 </body>
 </html>

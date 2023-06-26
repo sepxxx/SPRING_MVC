@@ -1,10 +1,31 @@
 package com.spring.mvc;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Employee {
+
+    @Size(min = 2,message = "must be min 2 chars long")
     private String name;
+    @NotBlank(message = "field can not be blank")
     private String surname;
     private int salary;
+
+    private String department;
+
+    private String carBrand;
+
+    private String[] languages;
+
+    private Map<String, String> departmentsMap;
     public Employee() {
+        departmentsMap = new HashMap<>();
+        departmentsMap.put("IT", "IT");
+        departmentsMap.put("CRYPTO", "CRYPTO");
+        departmentsMap.put("POLICE", "POLICE");
     }
 
     public String getName() {
@@ -29,5 +50,33 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public Map<String, String> getDepartmentsMap() {
+        return departmentsMap;
+    }
+
+    public String getCarBrand() {
+        return carBrand;
+    }
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
+    }
+
+    public String[] getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(String[] languages) {
+        this.languages = languages;
     }
 }
