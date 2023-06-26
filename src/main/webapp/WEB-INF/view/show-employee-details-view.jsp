@@ -15,7 +15,12 @@
     <h2>NICE TO MEET YOU</h2>
     <br>
     <br>
-<%--    ${param.employeeName}--%>
-${employeeNameAttribute} ${descriptionAttribute}
+    ${employee.name}
+    <br>
+    <br>
+    ${employee.surname}
+    <br>
+    <br>
+    ${employee.salary}
 </body>
 </html>

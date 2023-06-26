@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-    <h2>MY FIRST JAVA VIEW</h2>
-    <a href="askEmployeeName">ASK NAME</a>
+    <h2>HELLO EMPLOYEE</h2>
+    <a href="askEmployeeDetails">ADD YOUR DETAILS</a>
 </body>
 </html>
