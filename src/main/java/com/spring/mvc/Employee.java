@@ -1,5 +1,6 @@
 package com.spring.mvc;
 
+import com.spring.mvc.validation.CheckEmail;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -21,6 +22,9 @@ public class Employee {
     private String[] languages;
 
     private Map<String, String> departmentsMap;
+
+    @CheckEmail
+    private String email;
     public Employee() {
         departmentsMap = new HashMap<>();
         departmentsMap.put("IT", "IT");
@@ -78,5 +82,13 @@ public class Employee {
 
     public void setLanguages(String[] languages) {
         this.languages = languages;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

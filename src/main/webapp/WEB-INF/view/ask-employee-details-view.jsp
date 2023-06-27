@@ -40,6 +40,9 @@
   DE <form:checkbox path="languages" value="DEUTCH"/>
   FR <form:checkbox path="languages" value="FRENCH"/>
   <br><br>
+  EMAIL <form:input path="email"/> <form:errors path="email"/>
+  <br><br>
+
   <input type="submit" value="SEND INFO">
 
 </form:form>

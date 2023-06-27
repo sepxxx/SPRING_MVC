@@ -36,5 +36,7 @@
             <li>${lang}</li>
         </c:forEach>
     </ul>
+    <br><br>
+    EMAIL: ${employee.email}
 </body>
 </html>
